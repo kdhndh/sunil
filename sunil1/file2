@@ -1,0 +1,94 @@
+to start ansible 
+ 
+ we  want linux machines minimum 2 one as server another as node 
+
+ login to server and execute this commands
+  sudo -i
+  vi /etc/ssh/sshd_config
+
+here password authentication :yes
+
+  service sshd restart
+  service sshd status
+   adduser anything
+   password anything
+
+visudo
+here 
+usernae ALL=(ALL:ALL) NOPASSWD:ALL
+
+su ansible(username)
+cd ~
+sudo apt_get install ansible -y
+
+ansible is intalled on server
+
+NOW NODE SETUP
+
+do same steps as above done
+ sudo apt_get install python -y     in node
+
+ again login to server and execute these commands
+
+
+ ssh-keygen
+ cd ~/.ssh
+ ls
+ ssh-copy-id usrname@privatekey of node
+  sudo vi /etc/ansible/hosts
+  sudo mv etc/ansible/hosts etc/ansible/hosts.org
+   sudo vi etc/ansible/hosts
+
+   here in editor copy the ips of nodes
+   example
+   172.162.0.31
+   local hosts
+   172.162.0.183
+   ansible
+
+
+   here pllya command like
+
+   ansible -m ping all
+
+  1  ssh keygen
+    2  ls
+    3  ssh keygen
+    4  ssh-keygen
+    5  cd .ssh
+    6  id -a
+    7  ls-la
+    8  ls -la
+    9  cd .ssh
+   10  sudo .ssh
+   11  sudo cd .ssh
+   12  pwd
+   13  exit
+   14  cd .ssh
+   15  exi
+   16  sudo cd .ssh
+   17  wxit
+   18  exit
+   19  cd .ssh
+   20  ssh-copy-id ansible@172.31.92.208
+   21  exit
+   22  sudo vi /etc/ansible/hosts
+   23  sudo ansible -m ping all
+   24  ansible -m ping all
+   25  ls
+   26  ansible all -m command -a "touch f1"
+   27  ls
+   28  ansible all -m command -a "touch f1 && mkdir chaithu"
+   29  ls
+   30  vi file1.yml
+   31  ansible-playbook file1.yml --syntax-check
+   32  vi file1.yml
+   33  ansible-playbook file1.yml --syntax-check
+   34  vi file1.yml
+   35  ansible-playbook file1.yml --syntax-check
+   36  vi file1.yml
+   37  ansible-playbook file1.yml --syntax-check
+   38  ansible-playbook file1.yml
+   39  ls
+   40  ls-ltr
+   41  ls commands
